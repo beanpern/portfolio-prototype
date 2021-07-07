@@ -103,6 +103,11 @@ a:visited {
   margin-top: 1vw;
   width: 12%;
   height: auto;
+  transition: all 1s;
+}
+
+.back:hover {
+  transform: scale(1.1);
 }
 
 .back-text {
@@ -138,19 +143,18 @@ a:visited {
   -o-background-size: contain;
   background-size: contain;
 }
-
 .animated {
-  -webkit-animation: 1600ms pulsate infinite alternate ease-in-out;
-  -moz-animation: 1600ms pulsate infinite alternate ease-in-out;
-  -ms-animation: 1600ms pulsate infinite alternate ease-in-out;
-  -o-animation: 1600ms pulsate infinite alternate ease-in-out;
-  animation: 1600ms pulsate infinite alternate ease-in-out;
+  -webkit-animation: 1400ms pulsate infinite alternate ease-in-out;
+  -moz-animation: 1400ms pulsate infinite alternate ease-in-out;
+  -ms-animation: 1400ms pulsate infinite alternate ease-in-out;
+  -o-animation: 1400ms pulsate infinite alternate ease-in-out;
+  animation: 2000ms pulsate infinite alternate ease-in-out;
 }
 
 @keyframes pulsate {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% { transform: scale(.8); }
+  50% { transform: scale(1); }
+  100% { transform: scale(.8); }
 }
 @-webkit-keyframes pulsate {
   0% { -webkit-transform: scale(1); }
@@ -171,6 +175,74 @@ a:visited {
   0% { -o-transform: scale(1); }
   50% { -o-transform: scale(1.5); }
   100% { -o-transform: scale(1); }  
+}
+
+.delay1600ms {
+  animation-delay: -1600ms;
+}
+
+.delay1440ms {
+  animation-delay: -1440ms;
+}
+
+.delay1280ms {
+  animation-delay: -1280ms;
+}
+
+.delay1120ms {
+  animation-delay: -1120ms;
+}
+
+.delay960ms {
+  animation-delay: -960ms;
+}
+
+.delay800ms {
+  animation-delay: -800ms;
+}
+
+.delay640ms {
+  animation-delay: -640ms;
+}
+
+.delay480ms {
+  animation-delay: -480ms;
+}
+
+.delay320ms {
+  animation-delay: -320ms;
+}
+
+.delay160ms {
+  animation-delay: -160ms;
+}
+
+.delay1400ms {
+  animation-delay: -1400ms;
+}
+
+.delay1200ms {
+  animation-delay: -1200ms;
+}
+
+.delay1000ms {
+  animation-delay: -1000ms;
+}
+
+.delay800ms {
+  animation-delay: -800ms;
+}
+
+.delay600ms {
+  animation-delay: -600ms;
+}
+
+.delay400ms {
+  animation-delay: -400ms;
+}
+
+.delay200ms {
+  animation-delay: -200ms;
 }
 
 .lg-square {
@@ -204,7 +276,7 @@ a:visited {
 .circle-grid {
   z-index: -1;
   position:absolute;
-  height: 2%;
+  height: 2vh;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -212,12 +284,12 @@ a:visited {
 
 .right-circle-grid {
   left: 89.5%;
-  width: 10%;
+  width: 9vw;
 }
 
 .left-circle-grid {
   left: 5%;
-  width: 14.2%;
+  width: 13vw;
 }
 
 .right-circle-grid-top {
@@ -242,7 +314,7 @@ a:visited {
   border-radius: 50%;
   margin: 0px 4% 0px 4%;
   border-style: solid;
-  border-width: 6px;
+  border-width: 5px;
 }
 
 .black-circle {
