@@ -32,7 +32,7 @@ a:visited {
 .large-text {
   cursor: pointer;
   position: fixed;
-  z-index: -1;
+  z-index: -3;
   left: 11%;
   top: 7%;
   width: 40vw;
@@ -44,7 +44,7 @@ a:visited {
 
 .medium-text {
   position:fixed;
-  z-index: -1;
+  z-index: -3;
   left:13%;
   top: 15.5%;
   font-size: 5vw;
@@ -65,7 +65,7 @@ a:visited {
   transform: translate(1vw,1vw);
 }
 
-#text:hover {
+.large-text:hover {
   background-color: #22222B;
   /* left: 10.5%;
   top:6%; */
@@ -142,6 +142,7 @@ a:visited {
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
+  transition: all 1.5s;
 }
 .animated {
   -webkit-animation: 1400ms pulsate infinite alternate ease-in-out;

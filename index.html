@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,22 +19,22 @@
   </script>
 </head>
 <body>
-  <div id="text" class="large-text">
-    <!-- <a class="welcome-link"> -->
-      <h1 class="welcome-text white-text hey-text">Hey,</h1>
-      <h1 class="welcome-text blue-text name-text" id="name">I'm Joe</h1>
-    <!-- </a> -->
+  <div class="large-text">
+    <div id="text" class="animate__animated animate__fadeInUp ">
+        <h1 class="welcome-text white-text hey-text">Hey,</h1>
+        <h1 class="welcome-text blue-text name-text" id="name">I'm Joe</h1>
+    </div>
   </div>
 
-  <div id="info-links" class="medium-text" hidden>
+  <div id="info-links" class="medium-text animate__animated animate__fadeInUp" hidden>
     <div id="about-button" class="medium-text-wrapper">
-      <h2 id="aboutme-text" class="blue-text">About Me</h2>
+      <h2 id="aboutme-text" class="blue-text animate__animated animate__rotateInUpLeft">About Me</h2>
     </div>
     <div id="projects-button" class="medium-text-wrapper">
-      <h2 id="projects-text" class="white-text">Projects</h2>
+      <h2 id="projects-text" class="white-text animate__animated animate__rotateInUpLeft">Projects</h2>
     </div>
     <div id="contact-button" class="medium-text-wrapper">
-      <h2 id="contact-text" class="white-text">Contact</h2>
+      <h2 id="contact-text" class="white-text animate__animated animate__rotateInUpLeft">Contact</h2>
     </div>
   </div>
 

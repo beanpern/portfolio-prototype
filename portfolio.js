@@ -19,15 +19,15 @@ function welcome () {
   aboutButton.onclick = function (event) {
     infoLinks.style.display = 'none'
     aboutSection.style.display = 'block'
-    bgPhoto.style.top = '30%'
-    bgPhoto.style.left = '70%'
+    bgPhoto.style.transform = 'scale(.5)'
+    bgPhoto.style.transform = 'translate(30%,20%)'
   }
 
   aboutBackButton.onclick = function (event) {
     aboutSection.style.display = 'none'
     infoLinks.style.display = 'block'
-    bgPhoto.style.top = '13%'
-    bgPhoto.style.left = '50%'
+    bgPhoto.style.transform = 'scale(1)'
+    bgPhoto.style.transform = 'translate(0,0)'
   }
 
   projectsButton.onclick = function (event) {
@@ -37,14 +37,14 @@ function welcome () {
   contactButton.onclick = function (event) {
     infoLinks.style.display = 'none'
     contactSection.style.display = 'block'
-    bgPhoto.style.top = '30%'
-    bgPhoto.style.left = '70%'
+    bgPhoto.style.transform = 'scale(.5)'
+    bgPhoto.style.transform = 'translate(30%,20%)'
   }
 
   contactBackButton.onclick = function (event) {
     contactSection.style.display = 'none'
     infoLinks.style.display = 'block'
-    bgPhoto.style.top = '13%'
-    bgPhoto.style.left = '50%'
+    bgPhoto.style.transform = 'scale(1)'
+    bgPhoto.style.transform = 'translate(0,0)'
   }
 }
