@@ -133,7 +133,7 @@ a:visited {
   position:fixed;
   top:13%;
   right:0;
-  bottom:0;
+  bottom:-25%;
   left:50%;
   background-image: url(Images/best_outline.png);
   background-repeat: no-repeat;
@@ -142,7 +142,8 @@ a:visited {
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
-  transition: all 1.5s;
+  transition: all 1s;
+  transition-timing-function: ease;
 }
 .animated {
   -webkit-animation: 1400ms pulsate infinite alternate ease-in-out;
