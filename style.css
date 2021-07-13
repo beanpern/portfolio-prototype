@@ -116,8 +116,9 @@ a:visited {
 }
 
 .welcome-text {
-  font-size: 10vw;
+  font-size: 18vmin;
   padding-left: 2vw;
+  white-space: nowrap;
 }
 
 .white-text {
@@ -248,12 +249,13 @@ a:visited {
 }
 
 .lg-square {
+  transition: all 1s;
   background-color: #7F5AF0;
 }
 
 .right-square {
   z-index: -2;
-  position:absolute;
+  position:fixed;
   width: 13%;
   height: 25%;
   border-bottom-left-radius: 30px;
@@ -265,12 +267,12 @@ a:visited {
 
 .left-square {
   z-index: -2;
-  position:absolute;
-  width: 33%;
-  height:17%;
+  position:fixed;
+  width: 33vw;
+  height:17vh;
   border-top-right-radius: 30px;
-  left:0;
-  bottom:0;
+  left:0vw;
+  bottom:0vh;
   border-top: 4px solid #22222B;
   border-right: 4px solid #22222B;
 }
@@ -278,7 +280,7 @@ a:visited {
 .circle-grid {
   z-index: -1;
   position:absolute;
-  height: 2vh;
+  height: auto;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -286,12 +288,12 @@ a:visited {
 
 .right-circle-grid {
   left: 89.5%;
-  width: 9vw;
+  width: auto;
 }
 
 .left-circle-grid {
   left: 5%;
-  width: 13vw;
+  width: auto;
 }
 
 .right-circle-grid-top {
@@ -303,18 +305,18 @@ a:visited {
 }
 
 .left-circle-grid-top {
-  bottom: 19.6%;
+  bottom: 18.5%;
 }
 
 .left-circle-grid-bot {
-  bottom: 14.3%;
+  bottom: 13%;
 }
 
 .sm-circle {
-  width: 25%;
-  height: 100%;
+  margin: 0px 5px 0px 5px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  margin: 0px 4% 0px 4%;
   border-style: solid;
   border-width: 5px;
 }

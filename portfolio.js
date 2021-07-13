@@ -9,6 +9,8 @@ function welcome () {
   var contactSection = document.getElementById('contact-section')
   var contactBackButton = document.getElementById('contact-back-button')
   var bgPhoto = document.getElementsByClassName('bg-photo')[0]
+  var squares = document.getElementsByClassName('lg-square')
+  var circles = document.getElementsByClassName('sm-circle')
 
   welcomeText.onclick = function (event) {
     // event.preventDefault();
@@ -22,12 +24,22 @@ function welcome () {
     infoLinks.style.display = 'none'
     aboutSection.style.display = 'block'
     bgPhoto.style.transform = 'translate(30%,30%)'
+    squares[0].style.display = 'none'
+    squares[1].style.display = 'none'
+    for (var i = 0; i < circles.length; i++) {
+      circles[i].style.display = 'none';
+    }
   }
 
   aboutBackButton.onclick = function (event) {
     aboutSection.style.display = 'none'
     infoLinks.style.display = 'block'
     bgPhoto.style.transform = 'translate(0,0)'
+    squares[0].style.display = 'block'
+    squares[1].style.display = 'block' 
+    for (var i = 0; i < circles.length; i++) {
+      circles[i].style.display = 'block';
+    }
   }
 
   projectsButton.onclick = function (event) {
@@ -38,11 +50,21 @@ function welcome () {
     infoLinks.style.display = 'none'
     contactSection.style.display = 'block'
     bgPhoto.style.transform = 'translate(30%,30%)'
+    squares[0].style.display = 'none'
+    squares[1].style.display = 'none'
+    for (var i = 0; i < circles.length; i++) {
+      circles[i].style.display = 'none';
+    }
   }
 
   contactBackButton.onclick = function (event) {
     contactSection.style.display = 'none'
     infoLinks.style.display = 'block'
     bgPhoto.style.transform = 'translate(0,0)'
+    squares[0].style.display = 'block'
+    squares[1].style.display = 'block'
+    for (var i = 0; i < circles.length; i++) {
+      circles[i].style.display = 'block';
+    }
   }
 }
