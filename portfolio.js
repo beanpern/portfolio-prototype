@@ -27,7 +27,7 @@ function welcome () {
     squares[0].style.display = 'none'
     squares[1].style.display = 'none'
     for (var i = 0; i < circles.length; i++) {
-      circles[i].style.display = 'none';
+      circles[i].style.display = 'none'
     }
   }
 
@@ -36,9 +36,9 @@ function welcome () {
     infoLinks.style.display = 'block'
     bgPhoto.style.transform = 'translate(0,0)'
     squares[0].style.display = 'block'
-    squares[1].style.display = 'block' 
+    squares[1].style.display = 'block'
     for (var i = 0; i < circles.length; i++) {
-      circles[i].style.display = 'block';
+      circles[i].style.display = 'block'
     }
   }
 
@@ -53,7 +53,7 @@ function welcome () {
     squares[0].style.display = 'none'
     squares[1].style.display = 'none'
     for (var i = 0; i < circles.length; i++) {
-      circles[i].style.display = 'none';
+      circles[i].style.display = 'none'
     }
   }
 
@@ -64,7 +64,7 @@ function welcome () {
     squares[0].style.display = 'block'
     squares[1].style.display = 'block'
     for (var i = 0; i < circles.length; i++) {
-      circles[i].style.display = 'block';
+      circles[i].style.display = 'block'
     }
   }
 }

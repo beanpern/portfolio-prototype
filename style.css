@@ -40,6 +40,7 @@ a:visited {
   background-color: #16161A;
   text-align: left;
   transition: all 1s;
+  font-size: 18vmin;
 }
 
 .medium-text {
@@ -47,14 +48,14 @@ a:visited {
   z-index: -3;
   left:13%;
   top: 15.5%;
-  font-size: 5vw;
+  font-size: 10vmin;
+  white-space: nowrap;
 }
 
 .medium-text-wrapper {
   cursor: pointer;
   width: 30vw;
   text-align: center;
-  background-color: #16161A;
   border-radius: 30px;
   margin: 3% 0 3% 0;
   transition: all 1s;
@@ -67,8 +68,6 @@ a:visited {
 
 .large-text:hover {
   background-color: #22222B;
-  /* left: 10.5%;
-  top:6%; */
   transform: translate(1vw,1vw);
 }
 
@@ -116,7 +115,6 @@ a:visited {
 }
 
 .welcome-text {
-  font-size: 18vmin;
   padding-left: 2vw;
   white-space: nowrap;
 }
@@ -138,7 +136,6 @@ a:visited {
   left:50%;
   background-image: url(Images/best_outline.png);
   background-repeat: no-repeat;
-  background-size: contain;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -256,8 +253,8 @@ a:visited {
 .right-square {
   z-index: -2;
   position:fixed;
-  width: 13%;
-  height: 25%;
+  width: 13vw;
+  height: 25vh;
   border-bottom-left-radius: 30px;
   right:0;
   top: 0;
@@ -271,8 +268,8 @@ a:visited {
   width: 33vw;
   height:17vh;
   border-top-right-radius: 30px;
-  left:0vw;
-  bottom:0vh;
+  left:0;
+  bottom:0;
   border-top: 4px solid #22222B;
   border-right: 4px solid #22222B;
 }
@@ -305,20 +302,20 @@ a:visited {
 }
 
 .left-circle-grid-top {
-  bottom: 18.5%;
+  bottom: 19.8vh;
 }
 
 .left-circle-grid-bot {
-  bottom: 13%;
+  bottom: 14.4vh;
 }
 
 .sm-circle {
-  margin: 0px 5px 0px 5px;
-  width: 20px;
-  height: 20px;
+  margin: 0 5px 0 5px;
+  width: 1vw;
+  height: 1vw;
   border-radius: 50%;
   border-style: solid;
-  border-width: 5px;
+  border-width: 4px;
 }
 
 .black-circle {
@@ -327,4 +324,43 @@ a:visited {
 
 .blue-circle {
   border-color: #7F5AF0;
+}
+
+@media screen and (max-width: 1692px) {
+  .bg-photo {
+    z-index: -5;
+    top:40vh;
+    right:-25vw;
+    bottom:-25vh;
+    left:60vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .left-circle-grid {
+    transform: translate(-2vw,1.5vh);
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .sm-circle {
+    display: none;
+  }
+  .lg-square {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bg-photo {
+    top: 49vh;
+    bottom: -45vh;
+    right:0;
+    left:0;
+  }
+
+  .large-text {
+    font-size: 22vmin;
+    padding-bottom: 2vh;
+  }
 }
