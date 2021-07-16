@@ -11,50 +11,61 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <title>Joe Pernecky</title>
   <script src="portfolio.js"></script>
   <script>
     window.onload = welcome;
   </script>
 </head>
-<body>
-  <div id="text" class="large-text">
-    <div class="animate__animated animate__fadeInUp">
+<body id="body">
+  <div id="text" class="large-text font-weight-500">
+    <div class="animate__animated animate__fadeInUp animate__faster">
         <h1 class="welcome-text white-text hey-text">Hey,</h1>
         <h1 class="welcome-text blue-text name-text" id="name">I'm Joe</h1>
     </div>
   </div>
 
-  <div id="info-links" class="medium-text animate__animated animate__fadeInUp" hidden>
+  <div id="info-links" class="medium-text animate__animated font-weight-500" hidden>
     <div id="about-button" class="medium-text-wrapper">
-      <h2 id="aboutme-text" class="blue-text animate__animated animate__rotateInUpLeft">About Me</h2>
+      <h2 id="aboutme-text" class="blue-text animate__animated animate__rotateInUpLeft animate__faster">About Me</h2>
     </div>
     <div id="projects-button" class="medium-text-wrapper">
-      <h2 id="projects-text" class="white-text animate__animated animate__rotateInUpLeft">Projects</h2>
+      <h2 id="projects-text" class="white-text animate__animated animate__rotateInUpLeft animate__faster">Projects</h2>
     </div>
     <div id="contact-button" class="medium-text-wrapper">
-      <h2 id="contact-text" class="white-text animate__animated animate__rotateInUpLeft">Contact</h2>
+      <h2 id="contact-text" class="white-text animate__animated animate__rotateInUpLeft animate__faster">Contact</h2>
     </div>
   </div>
 
   <div id="about-me-section" class="small-text" hidden>
-    <p>Hey, I’m Joe! I’m a recent graduate from Michigan State University with a Bachelor of Arts degree. At MSU, I majored in Media and Information with a focus on web design and development and minored in computer science. I began college in engineering, but quickly developed a passion for designing and building websites and web applications.</p>
+    <h2 class="blue-text title-text font-weight-400">About Me</h2>
+    <div id="scrollable-content">
+      <p><span class="font-weight-600 purple-underline">Hey, I’m Joe!</span> I’m a recent graduate from Michigan State University with a Bachelor of Arts degree. At MSU, I majored in Media and Information with a focus on web design and development and minored in computer science. I began college in engineering, but quickly developed a passion for designing and building websites and web applications.</p>
 
-    <p>Throughout my time at MSU, I took all the available web design and development courses, plenty of computer science courses, as well as courses on digital business, user experience and data visualization (listed below*). Beyond my learning at MSU, I've taught myself a great deal and taken two full-stack web development courses on Udemy.</p>
+      <p>Throughout my time at MSU, I took all the available web design and development courses, plenty of computer science courses, as well as courses on digital business, user experience and data visualization (<span id="courses-link" class="blue-text cursor-pointer">Click to View</span>). Beyond my learning at MSU, I've taught myself a great deal and taken two full-stack web development courses on Udemy.</p>
 
-    <p>I gained a lot of experience from my time at MSU working in and leading teams to build applications using Scrum as a development cycle framework. This improved my organization, communication, and code readability skills. These abilities have lent themselves to my solo projects as well, improving my overall efficiency and workflow.</p>
+      <p>I gained a lot of experience from my time at MSU working in and leading teams to build applications using Scrum as a development cycle framework. This improved my organization, communication, and code readability skills. These abilities have lent themselves to my solo projects as well, improving my overall efficiency and workflow.</p>
 
-    <p>Since my graduation in May, I've been continuing to learn by teaching myself new skills and improving my existing ones. At the same time, I've been designing and building my portfolio/personal website and working with the EMU Science department in planning and designing a website for its students to use as a place for shared learning and discussion.</p>
-
-    <!-- <p>* Web Design and Development (HTML, CSS, Git), Advanced Web Development and Databases (HTML, CSS, SCSS, JS), Web Application Architecture & Development (HTML, CSS, SCSS, PHP, SQL, AJAX, JS), Introduction to Programming I (Python), Introduction to Programming II (C++), Discrete Structures Comp Sci (Discrete Mathematics), Software Design (OOP centered design in C++), Digital Business, Innovative Interfaces, Media Sketching & Graphics, Design and Layout, Evaluating HCT (Emphasis on usability) and Reasoning with Data (RStudio data visualization).</p> -->
-    <div id="about-back-button" class="back"><h3 class="back-text">Back</h3></div>
+      <p>Since my graduation in May, I've been continuing to learn by teaching myself new skills and improving my existing ones. At the same time, I've been designing and building my portfolio/personal website and working with the EMU Science department in planning and designing a website for its students to use as a place for shared learning and discussion.</p>
+    </div>
+    <div id="course-info" hidden>
+      <p>Web Design and Development (HTML, CSS, Git), Advanced Web Development and Databases (HTML, CSS, SCSS, JS), Web Application Architecture & Development (HTML, CSS, SCSS, PHP, SQL, AJAX, JS), Introduction to Programming I (Python), Introduction to Programming II (C++), Discrete Structures Comp Sci (Discrete Mathematics), Software Design (OOP centered design in C++), Digital Business, Innovative Interfaces, Media Sketching & Graphics, Design and Layout, Evaluating HCT (Emphasis on usability) and Reasoning with Data (RStudio data visualization) <span id="about-return-link" class="blue-text cursor-pointer">Return &#x21b2</span>. </p>
+    </div>
+    <div id="about-back-button" class="back"><h3 class="back-text font-weight-500">Back to Home</h3></div>
   </div>
 
-  <div id="contact-section" class="small-text" hidden>
-    <div>pernecky.joe@gmail.com</div>
-    
-    <div id="contact-back-button" class="back"><h3 class="back-text">Back</h3></div>
+  <div id="contact-section" class="white-text small-text" hidden>
+    <h2 class="blue-text title-text font-weight-400">Contact Me</h2>
+    <ul id="contact-links-list">
+      <li><img class="icon" src="Images/email-icon.png"></li>
+      <li><img class="icon" src="Images/github-icon.png"></li>
+      <li><img class="icon" src="Images/linkedin-icon.png"></li>
+    </ul>
+    <!-- <div id="email" class="contact-links"><img class="icon" src="Images/email-icon.png"></div>
+    <div id="github" class="contact-links"><img class="icon" src="Images/github-icon.png"></div>
+    <div id="linkedin" class="contact-links"><img class="icon" src="Images/linkedin-icon.png"></div> -->
+    <div id="contact-back-button" class="back"><h3 class="back-text">Back to Home</h3></div>
   </div>
 
   <div class="bg-photo"></div>

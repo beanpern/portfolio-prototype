@@ -71,19 +71,71 @@ a:visited {
   transform: translate(1vw,1vw);
 }
 
+.title-text {
+  font-size: 5vmin;
+  margin-bottom: 4vh;
+  /* text-decoration: underline; */
+}
+
 .small-text {
+  font-weight: 400;
   z-index: -5;
-  font-size: 1em;
-  position: absolute;
+  font-size: 3vmin;
+  position: static;
   color: #FFFFFE;
-  width: 60%;
+  width: 70vw;
   height: auto;
-  line-height: 4vh;
+  line-height: 5vh;
   background-color: #22222B;
   border-radius: 30px;
-  padding: 3vw;
-  left:5%;
-  top: 5%;
+  padding: 7vmin 7vmin 7vmin 7vmin;
+  margin: 100px;
+  border: 1px solid #7F5AF0;
+  /* left:5vw;
+  top: 5vh;
+  bottom: auto; */
+  /* overflow-y: auto; */
+}
+
+.purple-underline {
+  border-bottom: 1px solid #7F5AF0;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+#scrollable-content {
+  height: 100%;
+  margin: 0em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  direction: ltr;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border: 6px solid rgba(0, 0, 0, 0.18);
+  border-left: 0;
+  border-right: 0;
+  background-color: #7F5AF0;
 }
 
 .small-text > p {
@@ -91,18 +143,46 @@ a:visited {
   padding-bottom: 1vh;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+#contact-section {
+  text-align: left;
+  padding-top: 10vh;
+  /* padding-left: 20%; */
+}
+
+.contact-links {
+  font-size: 5vmin;
+  padding-top: 2vh;
+  padding-bottom: 5vh;
+}
+
+.contact-links-list {
+  text-decoration: none;
+}
+
+.icon {
+  width: 6vmin;
+  height: auto;
+  margin-right: 10px;
+}
+
 .back {
   z-index: auto;
-  position: relative;
+  position: static;
   cursor: pointer;
-  left: 80%;
-  background-color: #FF8E3C;
-  border-radius: 10px;
+  background-color: #FFFFFE;
+  border-radius: 20px;
   text-align: center;
-  margin-top: 1vw;
-  width: 12%;
+  margin: auto;
+  width: 25vmin;
   height: auto;
-  transition: all 1s;
+  padding: 7px 25px 7px 25px;
+  margin-top: 50px;
+  transition: all .5s;
+  white-space: nowrap;
 }
 
 .back:hover {
@@ -111,7 +191,8 @@ a:visited {
 
 .back-text {
   padding: 7px 20px 7px 20px;
-  font-size: .9em;
+  color: #16161A;
+  font-size: 2.5vmin;
 }
 
 .welcome-text {
@@ -127,7 +208,12 @@ a:visited {
   color: #7F5AF0;
 }
 
+.orange-text {
+  color:#FF8E3C;
+}
+
 .bg-photo {
+  pointer-events: none;
   z-index:0;
   position:fixed;
   top:13%;
@@ -302,11 +388,11 @@ a:visited {
 }
 
 .left-circle-grid-top {
-  bottom: 19.8vh;
+  bottom: 18.8vh;
 }
 
 .left-circle-grid-bot {
-  bottom: 14.4vh;
+  bottom: 13.3vh;
 }
 
 .sm-circle {
@@ -328,17 +414,16 @@ a:visited {
 
 @media screen and (max-width: 1692px) {
   .bg-photo {
-    z-index: -5;
     top:40vh;
-    right:-25vw;
-    bottom:-25vh;
+    /* right:-25vw;
+    bottom:-25vh; */
     left:60vw;
   }
 }
 
 @media screen and (max-width: 1400px) {
   .left-circle-grid {
-    transform: translate(-2vw,1.5vh);
+    transform: translate(-2vw,.4vh);
   }
 }
 
