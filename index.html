@@ -4,71 +4,102 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Animate.css -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
+  <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#7f5af0">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#fffffe">
+
+  <!-- Title -->
   <title>Joe Pernecky</title>
+
+  <!-- Link JS -->
   <script src="portfolio.js"></script>
   <script>
     window.onload = welcome;
   </script>
 </head>
 <body id="body">
-  <div id="text" class="large-text font-weight-500">
+  <div id="text" class="welcome-section font-weight-500">
     <div class="animate__animated animate__fadeInUp animate__faster">
         <h1 class="welcome-text white-text hey-text">Hey,</h1>
         <h1 class="welcome-text blue-text name-text" id="name">I'm Joe</h1>
     </div>
   </div>
 
-  <div id="info-links" class="medium-text animate__animated font-weight-500" hidden>
-    <div id="about-button" class="medium-text-wrapper">
+  <div id="info-links" class="info-section animate__animated font-weight-500" hidden>
+    <div id="about-button" class="link-text-wrapper">
       <h2 id="aboutme-text" class="blue-text animate__animated animate__rotateInUpLeft animate__faster">About Me</h2>
     </div>
-    <div id="projects-button" class="medium-text-wrapper">
+    <div id="projects-button" class="link-text-wrapper">
       <h2 id="projects-text" class="white-text animate__animated animate__rotateInUpLeft animate__faster">Projects</h2>
     </div>
-    <div id="contact-button" class="medium-text-wrapper">
+    <div id="contact-button" class="link-text-wrapper">
       <h2 id="contact-text" class="white-text animate__animated animate__rotateInUpLeft animate__faster">Contact</h2>
     </div>
   </div>
 
-  <div id="about-me-section" class="small-text" hidden>
-    <h2 class="blue-text title-text font-weight-400">About Me</h2>
-    <div id="scrollable-content">
-      <p><span class="font-weight-600 purple-underline">Hey, I’m Joe!</span> I’m a recent graduate from Michigan State University with a Bachelor of Arts degree. At MSU, I majored in Media and Information with a focus on web design and development and minored in computer science. I began college in engineering, but quickly developed a passion for designing and building websites and web applications.</p>
-
-      <p>Throughout my time at MSU, I took all the available web design and development courses, plenty of computer science courses, as well as courses on digital business, user experience and data visualization (<span id="courses-link" class="blue-text cursor-pointer">Click to View</span>). Beyond my learning at MSU, I've taught myself a great deal and taken two full-stack web development courses on Udemy.</p>
-
-      <p>I gained a lot of experience from my time at MSU working in and leading teams to build applications using Scrum as a development cycle framework. This improved my organization, communication, and code readability skills. These abilities have lent themselves to my solo projects as well, improving my overall efficiency and workflow.</p>
-
-      <p>Since my graduation in May, I've been continuing to learn by teaching myself new skills and improving my existing ones. At the same time, I've been designing and building my portfolio/personal website and working with the EMU Science department in planning and designing a website for its students to use as a place for shared learning and discussion.</p>
-    </div>
-    <div id="course-info" hidden>
-      <p>Web Design and Development (HTML, CSS, Git), Advanced Web Development and Databases (HTML, CSS, SCSS, JS), Web Application Architecture & Development (HTML, CSS, SCSS, PHP, SQL, AJAX, JS), Introduction to Programming I (Python), Introduction to Programming II (C++), Discrete Structures Comp Sci (Discrete Mathematics), Software Design (OOP centered design in C++), Digital Business, Innovative Interfaces, Media Sketching & Graphics, Design and Layout, Evaluating HCT (Emphasis on usability) and Reasoning with Data (RStudio data visualization) <span id="about-return-link" class="blue-text cursor-pointer">Return &#x21b2</span>. </p>
-    </div>
-    <div id="about-back-button" class="back"><h3 class="back-text font-weight-500">Back to Home</h3></div>
-  </div>
-
-  <div id="contact-section" class="white-text small-text" hidden>
-    <h2 class="blue-text title-text font-weight-400">Contact Me</h2>
-    <ul id="contact-links-list">
-      <li><img class="icon" src="Images/email-icon.png"></li>
-      <li><img class="icon" src="Images/github-icon.png"></li>
-      <li><img class="icon" src="Images/linkedin-icon.png"></li>
+  <div id="about-me-section" class="about-page" hidden>
+    <ul id="about-me-title-bar">
+      <li><h2 id="about-me-title" class="medium-font font-weight-200 white-text"><span class="font-weight-600 white-text">About</span> Me</h2></li>
+      <li><div id="about-back-button" class="back"><h3 class="back-text font-weight-600">Back to Home</h3></div></li>
     </ul>
-    <!-- <div id="email" class="contact-links"><img class="icon" src="Images/email-icon.png"></div>
-    <div id="github" class="contact-links"><img class="icon" src="Images/github-icon.png"></div>
-    <div id="linkedin" class="contact-links"><img class="icon" src="Images/linkedin-icon.png"></div> -->
-    <div id="contact-back-button" class="back"><h3 class="back-text">Back to Home</h3></div>
+    <h3 id="resume-download" class="small-font blue-text">Download Resume</h3>
+    <div class="about-text">
+      <div id="scrollable-content">
+        <p><span class="small-font font-weight-600 purple-underline">Hey, I’m Joe!</span> I’m a recent graduate from Michigan State University with a Bachelor of Arts degree. At MSU, I majored in Media and Information with a focus on web design and development and minored in computer science. I began college in engineering, but quickly developed a passion for designing and building websites and web applications.</p>
+  
+        <p>Throughout my time at MSU, I took all the available web design and development courses, plenty of computer science courses, as well as courses on digital business, user experience and data visualization (<span id="courses-link" class="blue-text cursor-pointer">Click to View</span>). Beyond my learning at MSU, I've taught myself a great deal and taken two full-stack web development courses on Udemy.</p>
+  
+        <p>I gained a lot of experience from my time at MSU working in and leading teams to build applications using Scrum as a development cycle framework. This improved my organization, communication, and code readability skills. These abilities have lent themselves to my solo projects as well, improving my overall efficiency and workflow.</p>
+  
+        <p>Since my graduation in May, I've been continuing to learn by teaching myself new skills and improving my existing ones. At the same time, I've been designing and building my portfolio/personal website and working with the EMU Science department in planning and designing a website for its students to use as a place for shared learning and discussion.</p>
+      </div>
+      <div id="course-info" hidden>
+        <p>Web Design and Development (HTML, CSS, Git), Advanced Web Development and Databases (HTML, CSS, SCSS, JS), Web Application Architecture & Development (HTML, CSS, SCSS, PHP, SQL, AJAX, JS), Introduction to Programming I (Python), Introduction to Programming II (C++), Discrete Structures Comp Sci (Discrete Mathematics), Software Design (OOP centered design in C++), Digital Business, Innovative Interfaces, Media Sketching & Graphics, Design and Layout, Evaluating HCT (Emphasis on usability) and Reasoning with Data (RStudio data visualization) <span id="about-return-link" class="blue-text cursor-pointer">Return &#x21b2</span>. </p>
+      </div>
+    </div>
   </div>
 
-  <div class="bg-photo"></div>
+  <div id="contact-section" class="white-text" hidden>
+    <img src="Images/Contact-Page-Photo.png" alt="Another picture of me looking to right" id="contact-photo" class="animate__animated animate__fadeIn animate__slow">
+    <div id="contact-page-content">
+      <h2 id="contact-name" class="medium-font font-weight-200"><span class="font-weight-600 white-text">Joe</span> Pernecky</h2>
+      <h3 id="contact-description" class="small-font blue-text">Full-Stack Web Developer</h3>
+      <h3 id="find-me-on" class="grey-text extra-small-font">Find me on</h3>
+      <div id="contact-links-section">
+        <ul id="contact-links-list">
+          <li id="email-link"><img class="icon" src="Images/email-icon.png"><span class="btn sm-med-font white-text font-weight-500" data-clipboard-text="pernecky.joe@gmail.com">pernecky.joe@gmail.com</span><span class="tooltiptext">Click to copy email address</span></li>
+          <li id="github-link"><img class="icon" src="Images/github-icon-outline.png"><span class="sm-med-font white-text font-weight-500">/beanpern</span></li>
+          <li id="linkedin-link"><img class="icon" src="Images/linkedin-icon.png"><span class="sm-med-font white-text font-weight-500">/joe-pernecky</span></li>
+        </ul>
+      </div>
+      <!-- <div id="email" class="contact-links"><img class="icon" src="Images/email-icon.png"></div>
+      <div id="github" class="contact-links"><img class="icon" src="Images/github-icon.png"></div>
+      <div id="linkedin" class="contact-links"><img class="icon" src="Images/linkedin-icon.png"></div> -->
+      <div id="contact-back-button" class="back"><h3 class="back-text font-weight-600">Back to Home</h3></div>
+    </div>
+  </div>
+
+  <div class="bg-photo animate__animated animate__fadeIn animate__slow"></div>
   <div class="lg-square right-square"></div>
   <div class="lg-square left-square"></div>
 
@@ -99,5 +130,7 @@
     <div class="sm-circle black-circle animated delay1280ms"></div>
     <div class="sm-circle black-circle animated delay1600ms"></div>
   </div>
+
+  <script src="dist/clipboard.min.js"></script>
 </body>
 </html>
