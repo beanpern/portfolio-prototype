@@ -38,10 +38,13 @@
   </script>
 </head>
 <body id="body">
-  <div id="text" class="welcome-section font-weight-500">
-    <div class="animate__animated animate__fadeInUp animate__faster">
-        <h1 class="welcome-text white-text hey-text">Hey,</h1>
-        <h1 class="welcome-text blue-text name-text" id="name">I'm Joe</h1>
+  <div class="welcome-page">
+    <div class="mobile-tap-message mobile-tap-move" hidden><h3>Tap Here!</h3></div>
+    <div id="text" class="welcome-section font-weight-500">
+      <div class="animate__animated animate__fadeInUp animate__faster">
+          <h1 class="welcome-text white-text hey-text">Hey,</h1>
+          <h1 class="welcome-text blue-text name-text" id="name">I'm Joe</h1>
+      </div>
     </div>
   </div>
 
@@ -62,21 +65,31 @@
       <li><h2 id="about-me-title" class="medium-font font-weight-200 white-text"><span class="font-weight-600 white-text">About</span> Me</h2></li>
       <li><div id="about-back-button" class="back"><h3 class="back-text font-weight-600">Back to Home</h3></div></li>
     </ul>
-    <h3 id="resume-download" class="small-font blue-text">Download Resume</h3>
+    <div id="resume-download-div"><a id="resume-download" class="small-font orange-text blue-text-hover">View Resume</a></div>
+    <img src="Images/throwing_cap.png" alt="Another picture of me looking to right" id="about-photo" class="animate__animated animate__fadeIn animate__slow">
     <div class="about-text">
       <div id="scrollable-content">
-        <p><span class="small-font font-weight-600 purple-underline">Hey, I’m Joe!</span> I’m a recent graduate from Michigan State University with a Bachelor of Arts degree. At MSU, I majored in Media and Information with a focus on web design and development and minored in computer science. I began college in engineering, but quickly developed a passion for designing and building websites and web applications.</p>
+        <span class="small-font font-weight-600 orange-underline">Hey, I’m Joe!</span>
+        <div class="indented-text">
+          <p>I’m a recent graduate from Michigan State University with a Bachelor of Arts degree. At MSU, I majored in Media and Information with a focus on web design and development and minored in computer science. I began college in engineering, but quickly developed a passion for designing and building websites and web applications.</p>
   
-        <p>Throughout my time at MSU, I took all the available web design and development courses, plenty of computer science courses, as well as courses on digital business, user experience and data visualization (<span id="courses-link" class="blue-text cursor-pointer">Click to View</span>). Beyond my learning at MSU, I've taught myself a great deal and taken two full-stack web development courses on Udemy.</p>
-  
-        <p>I gained a lot of experience from my time at MSU working in and leading teams to build applications using Scrum as a development cycle framework. This improved my organization, communication, and code readability skills. These abilities have lent themselves to my solo projects as well, improving my overall efficiency and workflow.</p>
-  
-        <p>Since my graduation in May, I've been continuing to learn by teaching myself new skills and improving my existing ones. At the same time, I've been designing and building my portfolio/personal website and working with the EMU Science department in planning and designing a website for its students to use as a place for shared learning and discussion.</p>
+          <p>Throughout my time at MSU, I took all the available web design and development courses, plenty of computer science courses, as well as courses on digital business, user experience and data visualization (<span id="courses-link" class="orange-text cursor-pointer blue-text-hover">Click to View</span>). Beyond my learning at MSU, I've taught myself a great deal and taken two full-stack web development courses on Udemy.</p>
+    
+          <p>I gained a lot of experience from my time at MSU working in and leading teams to build applications using Scrum as a development cycle framework. This improved my organization, communication, and code readability skills. These abilities have lent themselves to my solo projects as well, improving my overall efficiency and workflow.</p>
+    
+          <p>Since my graduation in May, I've been continuing to learn by teaching myself new skills and improving my existing ones. At the same time, I've been designing and building my portfolio/personal website and working with the EMU Science department in planning and designing a website for its students to use as a place for shared learning and discussion.</p>
+        </div>
       </div>
       <div id="course-info" hidden>
-        <p>Web Design and Development (HTML, CSS, Git), Advanced Web Development and Databases (HTML, CSS, SCSS, JS), Web Application Architecture & Development (HTML, CSS, SCSS, PHP, SQL, AJAX, JS), Introduction to Programming I (Python), Introduction to Programming II (C++), Discrete Structures Comp Sci (Discrete Mathematics), Software Design (OOP centered design in C++), Digital Business, Innovative Interfaces, Media Sketching & Graphics, Design and Layout, Evaluating HCT (Emphasis on usability) and Reasoning with Data (RStudio data visualization) <span id="about-return-link" class="blue-text cursor-pointer">Return &#x21b2</span>. </p>
+        <p>Web Design and Development (HTML, CSS, Git), Advanced Web Development and Databases (HTML, CSS, SCSS, JS), Web Application Architecture & Development (HTML, CSS, SCSS, PHP, SQL, AJAX, JS), Introduction to Programming I (Python), Introduction to Programming II (C++), Discrete Structures Comp Sci (Discrete Mathematics), Software Design (OOP centered design in C++), Digital Business, Innovative Interfaces, Media Sketching & Graphics, Design and Layout, Evaluating HCT (Emphasis on usability) and Reasoning with Data (RStudio data visualization). <br><span id="about-return-link" class="orange-text cursor-pointer small-font blue-text-hover">Return &#x21b2</span></p>
       </div>
     </div>
+  </div>
+
+  <div id="projects-page" hidden>
+    <div id="under-construction-text"><h1 class="white-text font-weight-500">Under</h1><h1 class="blue-text font-weight-500"> Construction</h1></div>
+    <div id="projects-github-link"><img class="icon" src="Images/github-icon-outline.png"><span class="sm-med-font white-text font-weight-500 blue-text-hover orange-underline">View GitHub Instead</span></div>
+    <div id="projects-back-button" class="back"><h3 class="back-text font-weight-600">Back to Home</h3></div>
   </div>
 
   <div id="contact-section" class="white-text" hidden>
@@ -87,9 +100,9 @@
       <h3 id="find-me-on" class="grey-text extra-small-font">Find me on</h3>
       <div id="contact-links-section">
         <ul id="contact-links-list">
-          <li id="email-link"><img class="icon" src="Images/email-icon.png"><span class="btn sm-med-font white-text font-weight-500" data-clipboard-text="pernecky.joe@gmail.com">pernecky.joe@gmail.com</span><span class="tooltiptext">Click to copy email address</span></li>
-          <li id="github-link"><img class="icon" src="Images/github-icon-outline.png"><span class="sm-med-font white-text font-weight-500">/beanpern</span></li>
-          <li id="linkedin-link"><img class="icon" src="Images/linkedin-icon.png"><span class="sm-med-font white-text font-weight-500">/joe-pernecky</span></li>
+          <li id="email-link"><img class="icon" src="Images/email-icon.png"><span class="btn sm-med-font white-text font-weight-500 blue-text-hover" data-clipboard-text="pernecky.joe@gmail.com">pernecky.joe@gmail.com</span><span class="tooltiptext">Click to copy email address</span></li>
+          <li id="github-link"><img class="icon" src="Images/github-icon-outline.png"><span class="sm-med-font white-text font-weight-500 blue-text-hover">/beanpern</span></li>
+          <li id="linkedin-link"><img class="icon" src="Images/linkedin-icon.png"><span class="sm-med-font white-text font-weight-500 blue-text-hover">/joe-pernecky</span></li>
         </ul>
       </div>
       <!-- <div id="email" class="contact-links"><img class="icon" src="Images/email-icon.png"></div>

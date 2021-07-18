@@ -55,6 +55,32 @@ a:visited {
   white-space: nowrap;
 }
 
+.mobile-tap-message {
+  width: auto;
+  color: #fffffe;
+  text-align: center;
+  border-radius: 6px;
+  padding-bottom: 5px;
+  position: absolute;
+  z-index: 1;
+  left: 40vw;
+  top: 8vh;
+  opacity: 100;
+  transition: all 0.3s;
+  font-size: 3.5vmin;
+}
+
+.mobile-tap-message::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 1vmin;
+  border-style: solid;
+  border-color: #FF8E3C transparent transparent transparent;
+}
+
 /* About me, Projects and Contact Links Page Styles */
 .info-section {
   position:fixed;
@@ -103,35 +129,76 @@ a:visited {
   white-space: nowrap;
 }
 
-#resume-download {
+#resume-download-div {
   margin-left: 8vw;
-  padding-bottom: 3vh;
+  margin-bottom: 3vh;
+}
+
+#resume-download {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#about-photo {
+  pointer-events: none;
+  position: fixed;
+  height: 150vh;
+  width: auto;
+  bottom: -50vh;
+  right: -3vw;
 }
 
 .about-text {
   font-weight: 400;
   z-index: -5;
-  font-size: 2vmin;
-  position: static;
+  font-size: 18px;
+  position: fixed;
   color: #FFFFFE;
   width: 65vw;
-  height: auto;
+  height: 50vh;
   line-height: 5vh;
   background-color: #22222B;
   border-radius: 20px;
   padding: 7vmin 7vmin 7vmin 7vmin;
   margin-left: 5vw;
   border: 1px solid #7F5AF0;
+  overflow-y: auto;
 }
 
-.about-text > p {
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+.indented-text {
+  text-indent: 50px;
+  font-size: 18px;
+}
+
+.about-text p {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 #about-back-button {
   margin-top: 5vh;
   position: relative;
+}
+
+/* Projects Section Styles */
+#under-construction-text {
+  position: fixed;
+  left: 15vw;
+  top: 10vh;
+  font-size: 10vw;
+}
+
+#projects-github-link {
+  cursor: pointer;
+  position: fixed;
+  left: 30vw;
+  top: 65vh;
+}
+
+#projects-back-button {
+  position: fixed;
+  top: 5vh;
+  right: 5vw;
 }
 
 /* Contact Section Styles */
@@ -174,7 +241,7 @@ a:visited {
 }
 
 #contact-links-list > li > span {
-  padding-left: 1.5vw;
+  margin-left: 1.5vw;
 }
 
 #email-link .tooltiptext {
@@ -283,12 +350,47 @@ a:visited {
 }
 
 /* Animations */
+.mobile-tap-move {
+  -webkit-animation: 800ms bob infinite alternate ease-in-out;
+  -moz-animation: 800ms bob infinite alternate ease-in-out;
+  -ms-animation: 800ms bob infinite alternate ease-in-out;
+  -o-animation: 800ms bob infinite alternate ease-in-out;
+  animation: 800ms bob infinite alternate ease-in-out;
+}
+
+
 .animated {
-  -webkit-animation: 1400ms pulsate infinite alternate ease-in-out;
-  -moz-animation: 1400ms pulsate infinite alternate ease-in-out;
-  -ms-animation: 1400ms pulsate infinite alternate ease-in-out;
-  -o-animation: 1400ms pulsate infinite alternate ease-in-out;
+  -webkit-animation: 2000ms pulsate infinite alternate ease-in-out;
+  -moz-animation: 2000ms pulsate infinite alternate ease-in-out;
+  -ms-animation: 2000ms pulsate infinite alternate ease-in-out;
+  -o-animation: 2000ms pulsate infinite alternate ease-in-out;
   animation: 2000ms pulsate infinite alternate ease-in-out;
+}
+
+@keyframes bob {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(0,1vh); }
+  100% { transform: translate(0,0); }
+}
+@-webkit-keyframes bob {
+  0% { -webkit-transform: scale(.8); }
+  50% { -webkit-transform: scale(1); }
+  100% { -webkit-transform: scale(.8); }
+}
+@-moz-keyframes bob {
+  0% { -moz-transform: scale(.8); }
+  50% { -moz-transform: scale(1); }
+  100% { -moz-transform: scale(.8); }  
+}
+@-ms-keyframes bob {
+  0% { -ms-transform: scale(.8); }
+  50% { -ms-transform: scale(1); }
+  100% { -ms-transform: scale(.8); }  
+}
+@-o-keyframes bob {
+  0% { -o-transform: scale(.8); }
+  50% { -o-transform: scale(1); }
+  100% { -o-transform: scale(.8); }  
 }
 
 @keyframes pulsate {
@@ -297,24 +399,24 @@ a:visited {
   100% { transform: scale(.8); }
 }
 @-webkit-keyframes pulsate {
-  0% { -webkit-transform: scale(1); }
-  50% { -webkit-transform: scale(1.05); }
-  100% { -webkit-transform: scale(1); }
+  0% { -webkit-transform: scale(.8); }
+  50% { -webkit-transform: scale(1); }
+  100% { -webkit-transform: scale(.8); }
 }
 @-moz-keyframes pulsate {
-  0% { -moz-transform: scale(1); }
-  50% { -moz-transform: scale(1.05); }
-  100% { -moz-transform: scale(1); }  
+  0% { -moz-transform: scale(.8); }
+  50% { -moz-transform: scale(1); }
+  100% { -moz-transform: scale(.8); }  
 }
 @-ms-keyframes pulsate {
-  0% { -ms-transform: scale(1); }
-  50% { -ms-transform: scale(1.05); }
-  100% { -ms-transform: scale(1); }  
+  0% { -ms-transform: scale(.8); }
+  50% { -ms-transform: scale(1); }
+  100% { -ms-transform: scale(.8); }  
 }
 @-o-keyframes pulsate {
-  0% { -o-transform: scale(1); }
-  50% { -o-transform: scale(1.5); }
-  100% { -o-transform: scale(1); }  
+  0% { -o-transform: scale(.8); }
+  50% { -o-transform: scale(1); }
+  100% { -o-transform: scale(.8); }  
 }
 
 .delay1600ms {
@@ -396,7 +498,7 @@ a:visited {
   position:fixed;
   width: 13vw;
   height: 25vh;
-  border-bottom-left-radius: 30px;
+  border-bottom-left-radius: 20px;
   right:0;
   top: 0;
   border-bottom: 4px solid #22222B;
@@ -408,7 +510,7 @@ a:visited {
   position:fixed;
   width: 33vw;
   height:17vh;
-  border-top-right-radius: 30px;
+  border-top-right-radius: 20px;
   left:0;
   bottom:0;
   border-top: 4px solid #22222B;
@@ -470,12 +572,12 @@ a:visited {
 
 /* Media Queries */
 @media screen and (max-width: 1692px) {
-  .bg-photo {
+  /* .bg-photo {
     top:40vh;
-    /* right:-25vw;
-    bottom:-25vh; */
+    right:-25vw;
+    bottom:-25vh;
     left:60vw;
-  }
+  } */
 }
 
 @media screen and (max-width: 1400px) {
@@ -491,6 +593,12 @@ a:visited {
   .lg-square {
     display: none;
   }
+  .bg-photo {
+    top:40vh;
+    right:-25vw;
+    bottom:-25vh;
+    left:60vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -501,9 +609,20 @@ a:visited {
     left:0;
   }
 
-  .large-text {
+  .welcome-section {
     font-size: 22vmin;
+    top: 10vh;
     padding-bottom: 2vh;
+  }
+
+  .info-section {
+    font-size: 13vmin;
+    left: 15vw;
+    top: 10vh;
+  }
+
+  .mobile-tap-message {
+    display: block;
   }
 }
 
@@ -516,6 +635,10 @@ a:visited {
   color: #7F5AF0;
 }
 
+.blue-text-hover:hover {
+  color: #7F5AF0;
+}
+
 .orange-text {
   color:#FF8E3C;
 }
@@ -524,8 +647,8 @@ a:visited {
   color:#9999a3;
 }
 
-.purple-underline {
-  border-bottom: 1px solid #7F5AF0;
+.orange-underline {
+  border-bottom: 1.5px solid #FF8E3C;
 }
 
 .large-font {
@@ -566,7 +689,7 @@ a:visited {
 
 #scrollable-content {
   height: 100%;
-  margin: 0em;
+  margin: 0;
   overflow-y: auto;
   overflow-x: hidden;
   direction: ltr;
